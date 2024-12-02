@@ -1,13 +1,15 @@
-import ListGroup from "./components/ListGroup";
+import Alert from "./components/Alert";
 
 function App() {
-  let items = ["New York", "San Francisco", "Tokyo", "London", "Paris"];
-  const handSelectItem = (item: string) => {
-    console.log(item);
-  };
   return (
-    <div>
-      <ListGroup items={items} heading="Cities" onSelectItem={handSelectItem} />
+    <div className="alert alert-primary alert-dismissible fade show" role="alert">
+      <strong>Message</strong> <Alert />
+      <button
+        type="button"
+        className="btn-close"
+        data-bs-dismiss="alert"
+        aria-label="Close"
+      ></button>
     </div>
   );
 }
